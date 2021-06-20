@@ -20,5 +20,7 @@ module.exports = class SocialCommand extends BaseCommand {
       
       const channel = await message.guild.channels.cache.get("855945800404303872");
       channel.send(suggestEmbed).then(sentMessage => sentMessage.react('👍')).then(reaction => reaction.message.react('👎'));
+
+      message.channel.send('Suggestion Made.')
  }
 }
